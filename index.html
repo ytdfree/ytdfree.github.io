@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="OXrLNGo0koBx8iTSQu5pVuUPJof0mBqpHToXmpSx2G8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7TG1VM0HD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F7TG1VM0HD');
+  </script>
+  <meta name="google-site-verification" content="UsFvbhANqyC8jCMK5xVGExuVAyHArTABsEh8o409214" />
+  <link href='https://ytdfree.online' rel='canonical'/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Thumbnail Downloader Free Online</title>
+  <link rel="icon" type="image/png" href="/icon.png">
+  <meta content='Download high-quality YouTube thumbnails in HD, Full HD, and SD with our free Thumbnail Downloader tool. Fast, easy, and reliable!' name='description'/>
+  <meta name="keywords" content="YouTube Thumbnail Downloader, YTDFree.Online, free thumbnail downloader, YouTube, thumbnail generator, screenshots, image generator">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="2 days">
+  <meta name="language" content="English">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "YTDFree.Online",
+    "url": "https://ytdfree.online",
+    "description": "Download high-quality YouTube thumbnails in HD, Full HD, and SD with our free Thumbnail Downloader tool. Fast, easy, and reliable!"
+  }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #FF4500;
+      --secondary-color: #FFA500;
+      --dark-color: #1A1A1A;
+      --light-color: #F8F9FA;
+      --text-color: #2C2C2C;
+      --text-light: #6C757D;
+      --border-radius: 12px;
+      --transition: all 0.3s ease;
+      --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      --reverse-gradient: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    }
+    [data-theme="dark"] {
+      --light-color: #2C2C2C;
+      --text-color: #F8F9FA;
+      --text-light: #CED4DA;
+      --dark-color: #1A1A1A;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: var(--light-color);
+      color: var(--text-color);
+      font-size: 16px;
+      line-height: 1.7;
+      scrollbar-width: none;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background: var(--light-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 800;
+      margin-left: 8px;
+    }
+    .logo img {
+      height: 32px;
+      width: auto;
+    }
+    .logo span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 16px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+    nav ul li a:hover:not(.no-hover) {
+      background: var(--reverse-gradient);
+      color: #fff;
+    }
+    .no-hover {
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--text-color);
+      cursor: pointer;
+      margin-right: 8px;
+    }
+    #mobile-menu {
+      display: none;
+    }
+    .input-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .input-container input[type="text"] {
+      width: 100%;
+      padding: 1rem 10rem 1rem 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 50px;
+      background: #fff;
+      font-size: 1rem;
+      transition: var(--transition);
+      color: #2C2C2C;
+    }
+    [data-theme="dark"] .input-container input[type="text"] {
+      color: #2C2C2C;
+    }
+    .input-container input[type="text"]::placeholder {
+      color: #2C2C2C;
+      opacity: 1;
+    }
+    [data-theme="dark"] .input-container input[type="text"]::placeholder {
+      color: #2C2C2C;
+    }
+    .input-container input[type="text"]:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      outline: none;
+    }
+    .input-container input[type="submit"] {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0.75rem 1.5rem;
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+    .input-container input[type="submit"]:hover {
+      background: var(--reverse-gradient);
+    }
+    .input-container input[type="submit"]:disabled {
+      background: var(--text-light);
+      cursor: not-allowed;
+    }
+    .loading {
+      display: none;
+      font-size: 14px;
+      color: var(--primary-color);
+      margin: 1rem auto;
+      text-align: center;
+      max-width: 600px;
+    }
+    .loading.visible {
+      display: block;
+    }
+    .thumbnail-container {
+      position: relative;
+      display: inline-block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    .thumbnail-img {
+      max-width: 100%;
+      height: auto;
+      border: 3px solid var(--primary-color);
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    .thumbnail-img.error {
+      display: none;
+    }
+    .thumbnail-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    .thumbnail-container:hover .thumbnail-overlay {
+      opacity: 1;
+    }
+    .thumbnail-overlay span {
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .error-message {
+      display: none;
+      background-color: #fee2e2;
+      color: #dc2626;
+      border: 2px dashed #dc2626;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    #hidden_div {
+      margin-top: 2rem;
+    }
+    footer {
+      background: var(--dark-color);
+      color: var(--light-color);
+      padding: 40px 0 20px;
+      width: 100%;
+      margin-top: auto;
+    }
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 800;
+    }
+    .footer-logo img {
+      height: 32px;
+      width: auto;
+    }
+    .footer-logo span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+    }
+    .copyright a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .copyright a:hover {
+      text-decoration: underline;
+    }
+    .bottom-buttons {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      gap: 12px;
+      z-index: 1000;
+    }
+    .theme-toggle, .scroll-to-top {
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .theme-toggle:hover, .scroll-to-top:hover {
+      background: var(--reverse-gradient);
+      transform: scale(1.1);
+    }
+    .scroll-to-top {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .scroll-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .social-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .social-button {
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .social-button:hover {
+      background: var(--reverse-gradient);
+      transform: scale(1.1);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: var(--light-color);
+      color: var(--text-color);
+      max-width: 800px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 24px;
+      border-radius: var(--border-radius);
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      transition: var(--transition);
+    }
+    .modal-close:hover {
+      background: var(--reverse-gradient);
+    }
+    .article-section {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    #thumbnails {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 16px;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      #mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 0 0 12px 12px;
+        border: 1px solid #e0e0e0;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 999;
+      }
+      [data-theme="dark"] #mobile-menu {
+        background: var(--dark-color);
+      }
+      #mobile-menu.show {
+        display: flex;
+      }
+      #mobile-menu ul {
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+      }
+      #mobile-menu ul li a {
+        font-size: 18px;
+        padding: 12px 20px;
+        width: 100%;
+        text-align: left;
+        border-radius: 8px;
+      }
+      #mobile-menu ul li a:hover:not(.no-hover) {
+        color: #fff;
+      }
+      .input-container input[type="text"] {
+        padding: 1rem 7rem 1rem 1rem;
+      }
+      .modal-content {
+        width: 95%;
+        padding: 16px;
+      }
+      .article-title {
+        font-size: 1.125rem; /* text-lg */
+      }
+    }
+    @media (min-width: 769px) {
+      #mobile-menu {
+        display: flex !important;
+      }
+    }
+    @media (max-width: 576px) {
+      .logo, .footer-logo {
+        font-size: 20px;
+        margin-left: 0;
+      }
+      .logo img, .footer-logo img {
+        height: 28px;
+      }
+      .mobile-menu-btn {
+        margin-right: 0;
+      }
+      .input-container {
+        max-width: 100%;
+      }
+      .input-container input[type="text"] {
+        padding: 0.75rem 5rem 0.75rem 0.75rem;
+        font-size: 0.875rem;
+      }
+      .input-container input[type="submit"] {
+        padding: 0.5rem 1rem;
+        font-size: 12px;
+      }
+      .bottom-buttons {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        justify-content: flex-end;
+      }
+      .theme-toggle, .scroll-to-top, .social-button {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+      }
+      .social-buttons {
+        gap: 8px;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+      }
+      #hidden_div {
+        margin-top: 1rem;
+      }
+      .article-section {
+        padding-top: 0.25rem;
+        padding-bottom: 8px;
+      }
+      .article-title {
+        font-size: 1rem;
+        white-space: normal;
+        word-wrap: break-word;
+      }
+      .article-section p, .article-section li {
+        font-size: 0.875rem;
+      }
+      #thumbnails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+      .thumbnail-container {
+        width: 100%;
+        max-width: 300px;
+      }
+      .thumbnail-img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo">
+        <img src="/icon.png" alt="YTDFree.Online Logo">
+        <span>YTDFree.Online</span>
+      </a>
+      <button id="mobile-menu-btn" class="mobile-menu-btn">☰</button>
+      <nav id="mobile-menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="#" onclick="openModal('features-modal'); return false;">Features</a></li>
+          <li><a href="#" onclick="openModal('how-to-use-modal'); return false;">How to Use</a></li>
+          <li><a href="#" onclick="openModal('faq-modal'); return false;">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container py-12">
+    <div class="mb-8">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        YouTube Thumbnail Downloader Free Online
+      </h1>
+      <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+        Instantly generate high-quality thumbnails from YouTube videos. Paste your URL below and download!
+      </p>
+    </div>
+    <div class="input-container mb-8">
+      <form id="thumbnailForm" onsubmit="generateThumbnails(event)">
+        <input autocomplete="on" id="technicalarpvid" placeholder="Paste a YouTube URL" type="text">
+        <input id="technicalarpvideoButton" type="submit" value="Download">
+      </form>
+    </div>
+    <div class="loading" id="loading">Loading thumbnails...</div>
+    <div class="social-buttons">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://ytdfree.online" target="_blank" class="social-button" title="Share on Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/intent/tweet?url=https://ytdfree.online&text=Download YouTube thumbnails with YTDFree.Online!" target="_blank" class="social-button" title="Share on X">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+    </div>
+    <div id="hidden_div">
+      <div id="thumbnails" class="grid grid-cols-1 gap-6 justify-items-center"></div>
+    </div>
+    <!-- Article Content -->
+    <section class="pt-2 pb-12 text-left max-w-2xl mx-auto article-section">
+      <h2 class="text-xl font-bold mb-4 article-title">Download YouTube Thumbnails Easily with YTDFree.Online</h2>
+      <p class="mb-4">Looking to grab high-quality thumbnail images from YouTube videos? Our <strong>YouTube Thumbnail Downloader</strong> lets you download thumbnails in various resolutions, including Full HD (1080p), HD (720p), SD, and smaller sizes. Whether you're creating presentations, animations, or other creative projects, this tool supports YouTube formats like HD, HQ, 1080p, and 4K, making it a versatile solution for your needs.</p>
+      <h3 class="text-xl font-semibold mb-3">Why Use YTDFree.Online?</h3>
+      <p class="mb-4">Thumbnails are eye-catching visuals that summarize a video’s content. With our tool, you can:</p>
+      <ul class="list-disc pl-6 mb-4">
+        <li><strong>Access thumbnails instantly</strong>: Save time by downloading thumbnails for your projects.</li>
+        <li><strong>Use in creative work</strong>: Perfect for presentations, video editing, graphic design, or marketing materials.</li>
+        <li><strong>Choose your resolution</strong>: Select from multiple sizes to fit your specific requirements.</li>
+      </ul>
+      <p class="mb-4">This tool is ideal for content creators, marketers, and designers who need quick access to YouTube video thumbnails without hassle.</p>
+      <h3 class="text-xl font-semibold mb-3">How to Use YTDFree.Online</h3>
+      <p class="mb-4">Downloading a thumbnail is simple and user-friendly. Follow these steps:</p>
+      <ol class="list-decimal pl-6 mb-4">
+        <li><strong>Copy the YouTube URL</strong>: Go to the YouTube video with the thumbnail you want and copy its link.</li>
+        <li><strong>Paste the URL</strong>: Go to our website and paste the link into the provided input box.</li>
+        <li><strong>Select your thumbnail</strong>: The tool instantly generates thumbnails in various sizes. Choose the resolution you need.</li>
+        <li><strong>Download the image</strong>: Click the download button, and the thumbnail will save to your device.</li>
+      </ol>
+      <p class="mb-4"><strong>Note for mobile users</strong>: On Android devices, you can save images directly. For iPhone users, saving images may require additional steps due to iOS restrictions. If you’re using a jailbroken iPhone, you can download thumbnails without issues.</p>
+      <h3 class="text-xl font-semibold mb-3">Is Downloading YouTube Thumbnails Legal?</h3>
+      <p class="mb-4">Yes, downloading YouTube thumbnails is legal. However, thumbnails, like videos, are copyrighted by their creators. If you plan to reuse a thumbnail, you should:</p>
+      <ul class="list-disc pl-6 mb-4">
+        <li><strong>Seek permission</strong>: Contact the video owner before using their thumbnail for commercial or public purposes.</li>
+        <li><strong>Use responsibly</strong>: Avoid repurposing thumbnails in a way that violates copyright laws.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mb-3">Device Compatibility</h3>
+      <p class="mb-4">YTDFree.Online works seamlessly across most devices, including:</p>
+      <ul class="list-disc pl-6 mb-4">
+        <li><strong>Android devices</strong>: Fully compatible, allowing easy downloads and saving of thumbnails.</li>
+        <li><strong>Desktops and laptops</strong>: Works on Windows, macOS, and Linux with any modern browser.</li>
+        <li><strong>iPhones</strong>: Due to iOS restrictions, saving images may be challenging unless using a jailbroken device.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mb-3">Are There Copyright Risks When Reusing YouTube Thumbnails?</h3>
+      <p class="mb-4">Thumbnails are copyrighted by the video’s creator, so reusing them without permission carries risks, especially on platforms like YouTube. Here’s what to keep in mind:</p>
+      <ul class="list-disc pl-6 mb-4">
+        <li><strong>On YouTube</strong>: Reusing thumbnails without permission may lead to copyright strikes or content removal.</li>
+        <li><strong>Outside YouTube</strong>: Using thumbnails for non-YouTube projects (e.g., website design, logos, or Photoshop edits) is less likely to result in issues, but you should still seek permission to avoid potential DMCA complaints.</li>
+      </ul>
+      <p class="mb-4">To minimize risks, always credit the original creator or modify the thumbnail to create a unique version for your project.</p>
+      <h3 class="text-xl font-semibold mb-3">Are YouTube Thumbnails SEO-Friendly?</h3>
+      <p class="mb-4">Reusing YouTube thumbnails directly is <strong>not SEO-friendly</strong> because Google indexes these images and can identify duplicates. Using an unedited thumbnail may harm your website’s search rankings. To make thumbnails SEO-friendly:</p>
+      <ul class="list-disc pl-6 mb-4">
+        <li><strong>Edit the thumbnail</strong>: Use tools like Photoshop or Canva to add unique effects, text, or graphics, transforming the thumbnail into an original image.</li>
+        <li><strong>Optimize file names</strong>: Use descriptive, keyword-rich file names (e.g., “youtube-video-thumbnail-presentation.jpg”).</li>
+        <li><strong>Add alt text</strong>: Include relevant alt text for images on your website to boost accessibility and SEO.</li>
+      </ul>
+      <p class="mb-4">By creating a unique version of the thumbnail, you can enhance its SEO value and avoid duplicate content issues.</p>
+      <h3 class="text-xl font-semibold mb-3">Start Downloading Thumbnails Today!</h3>
+      <p class="mb-4">YTDFree.Online is a fast, free, and reliable tool for grabbing high-quality thumbnails. Whether you’re a content creator, designer, or marketer, this tool simplifies the process of accessing YouTube thumbnails for your projects. Just remember to use thumbnails responsibly and consider editing them for SEO and copyright purposes.</p>
+      <p>Try it now and elevate your creative projects with stunning YouTube thumbnails!</p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container container">
+      <a href="/" class="footer-logo">
+        <img src="/icon.png" alt="YTDFree.Online Logo">
+        <span>YTDFree.Online</span>
+      </a>
+      <div class="footer-links">
+        <a href="/" class="no-hover">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms and Conditions</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> <a href="https://ytdfree.online">YTDFree.Online</a> All Rights Reserved</p>
+    </div>
+  </footer>
+  <!-- Modals for Navbar -->
+  <div id="about-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('about-modal')">✕</button>
+      <h2 class="text-2xl font-bold mb-4">About YTDFree.Online</h2>
+      <p class="mb-4">YTDFree.Online is a free, user-friendly tool designed to help you quickly download high-quality thumbnails from any YouTube video. Created with content creators, marketers, and designers in mind, our app supports multiple resolutions, including Full HD (1080p), HD (720p), and SD, making it perfect for presentations, video editing, or graphic design projects.</p>
+      <p class="mb-4">We aim to provide a fast, reliable, and accessible solution for all your thumbnail needs, with compatibility across Android, desktops, and laptops. Our mission is to simplify your creative workflow while ensuring you use thumbnails responsibly by respecting copyright guidelines.</p>
+      <p>Explore our tool today and elevate your projects with stunning visuals!</p>
+    </div>
+  </div>
+  <div id="features-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('features-modal')">✕</button>
+      <h2 class="text-2xl font-bold mb-4">Features of YTDFree.Online</h2>
+      <p class="mb-4">Our tool is packed with features to make downloading YouTube thumbnails effortless:</p>
+      <ul class="list-disc pl-6 mb-4">
+        <li><strong>Multiple Resolutions</strong>: Download thumbnails in Full HD (1080p), HD (720p), SD, or smaller sizes to suit your needs.</li>
+        <li><strong>Instant Generation</strong>: Paste a YouTube URL, and thumbnails are generated in seconds.</li>
+        <li><strong>User-Friendly Interface</strong>: Simple design makes it easy for anyone to use, no technical skills required.</li>
+        <li><strong>Device Compatibility</strong>: Works on Android, desktops, and laptops; limited functionality on iPhones unless jailbroken.</li>
+        <li><strong>Free to Use</strong>: No hidden costs or subscriptions—just paste and download!</li>
+      </ul>
+      <p>Whether you're creating marketing materials or editing videos, our tool provides the flexibility and speed you need.</p>
+    </div>
+  </div>
+  <div id="how-to-use-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('how-to-use-modal')">✕</button>
+      <h2 class="text-2xl font-bold mb-4">How to Use YTDFree.Online</h2>
+      <p class="mb-4">Downloading YouTube thumbnails is quick and easy with our tool. Follow these steps:</p>
+      <ol class="list-decimal pl-6 mb-4">
+        <li><strong>Copy the YouTube URL</strong>: Go to the YouTube video with the thumbnail you want and copy its link.</li>
+        <li><strong>Paste the URL</strong>: Visit our website and paste the link into the input box.</li>
+        <li><strong>Generate Thumbnails</strong>: The tool will instantly display thumbnails in various sizes (e.g., Full HD, HD, SD).</li>
+        <li><strong>Download</strong>: Click on a thumbnail to open it, then right-click and select "Save Image As..." to download it to your device.</li>
+      </ol>
+      <p class="mb-4">For Android users, images save directly. iPhone users may need additional steps due to iOS restrictions, but jailbroken devices work seamlessly.</p>
+      <p>Try it now and see how simple it is to get high-quality thumbnails!</p>
+    </div>
+  </div>
+  <div id="faq-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('faq-modal')">✕</button>
+      <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+      <h3 class="text-lg font-semibold mb-2">Is downloading YouTube thumbnails legal?</h3>
+      <p class="mb-4">Yes, downloading thumbnails is legal, but they are copyrighted by the video creator. Always seek permission before reusing them for commercial or public purposes.</p>
+      <h3 class="text-lg font-semibold mb-2">Can I use this tool on my phone?</h3>
+      <p class="mb-4">Absolutely! The tool works on Android devices and desktops/laptops. iPhone users may face restrictions unless using a jailbroken device.</p>
+      <h3 class="text-lg font-semibold mb-2">Are downloaded thumbnails SEO-friendly?</h3>
+      <p class="mb-4">Unedited thumbnails are not SEO-friendly as Google indexes them as duplicates. Edit them with tools like Photoshop or Canva to make them unique and optimize with keyword-rich file names and alt text.</p>
+      <h3 class="text-lg font-semibold mb-2">What resolutions are available?</h3>
+      <p class="mb-4">You can download thumbnails in Full HD (1280x720), HD (720p), SD, and smaller sizes, depending on the video’s availability.</p>
+      <h3 class="text-lg font-semibold mb-2">Do I need to pay to use this tool?</h3>
+      <p>No, YTDFree.Online is completely free with no hidden fees!</p>
+    </div>
+  </div>
+  <div class="bottom-buttons">
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme"><i class="fa-regular fa-sun"></i></button>
+    <button class="scroll-to-top" onclick="scrollToTop()" title="Back to Top">↑</button>
+  </div>
+  <script>
+    // Global functions for onclick and onsubmit
+    function toggleMobileMenu(event) {
+      try {
+        console.log('Toggle mobile menu clicked/touched');
+        event.preventDefault();
+        const nav = document.getElementById('mobile-menu');
+        if (nav) {
+          nav.classList.toggle('show');
+        } else {
+          console.error('Mobile menu not found');
+        }
+      } catch (error) {
+        console.error('Error in toggleMobileMenu:', error);
+      }
+    }
+    function toggleTheme() {
+      console.log('Toggling theme');
+      const body = document.body;
+      const themeToggle = document.querySelector('.theme-toggle i');
+      const currentTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('theme', currentTheme);
+      themeToggle.classList.remove(currentTheme === 'dark' ? 'fa-sun' : 'fa-moon');
+      themeToggle.classList.add(currentTheme === 'dark' ? 'fa-moon' : 'fa-sun');
+    }
+    function scrollToTop() {
+      console.log('Scrolling to top');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function openModal(modalId) {
+      console.log('Attempting to open modal:', modalId);
+      try {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.style.display = 'flex';
+          console.log('Modal opened successfully:', modalId);
+        } else {
+          console.error('Modal not found for ID:', modalId);
+        }
+      } catch (error) {
+        console.error('Error opening modal:', modalId, error);
+      }
+    }
+    function closeModal(modalId) {
+      console.log('Attempting to close modal:', modalId);
+      try {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.style.display = 'none';
+          console.log('Modal closed successfully:', modalId);
+        } else {
+          console.error('Modal not found for ID:', modalId);
+        }
+      } catch (error) {
+        console.error('Error closing modal:', modalId, error);
+      }
+    }
+    function generateThumbnails(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      console.log('Generating thumbnails');
+      const videoURL = document.getElementById('technicalarpvid').value.trim();
+      const button = document.getElementById('technicalarpvideoButton');
+      const loading = document.getElementById('loading');
+      const thumbnailDiv = document.getElementById('hidden_div');
+      const thumbnails = document.getElementById('thumbnails');
+      if (!videoURL) {
+        thumbnails.innerHTML = '<div class="error-message">Please enter a YouTube URL.</div>';
+        document.getElementById('technicalarpvid').value = '';
+        thumbnailDiv.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+      button.disabled = true;
+      loading.classList.add('visible');
+      thumbnails.innerHTML = '';
+      thumbnailDiv.style.display = 'block';
+      console.log('Processing URL:', videoURL);
+      function getYouTubeID(url) {
+        console.log('Extracting video ID from URL:', url);
+        const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = url.match(regExp);
+        const id = match && match[2].length === 11 ? match[2] : null;
+        console.log('Extracted video ID:', id);
+        return id;
+      }
+      const videoID = getYouTubeID(videoURL);
+      if (videoID) {
+        console.log('Checking maxresdefault for video ID:', videoID);
+        const img = new Image();
+        const timeout = setTimeout(() => {
+          console.log('Timeout: Falling back to no maxresdefault');
+          appendThumbnails(videoID, false);
+          button.disabled = false;
+          loading.classList.remove('visible');
+        }, 2000);
+        img.src = `https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`;
+        img.onload = function() {
+          clearTimeout(timeout);
+          console.log('maxresdefault loaded, width:', img.width, 'height:', img.height);
+          appendThumbnails(videoID, img.width >= 120 && img.height >= 120);
+          button.disabled = false;
+          loading.classList.remove('visible');
+        };
+        img.onerror = function() {
+          clearTimeout(timeout);
+          console.log('maxresdefault failed to load, falling back');
+          appendThumbnails(videoID, false);
+          button.disabled = false;
+          loading.classList.remove('visible');
+        };
+      } else {
+        console.log('Invalid video URL:', videoURL);
+        thumbnails.innerHTML = '<div class="error-message">It seems like your URL has an error. Please check and try again.</div>';
+        button.disabled = false;
+        loading.classList.remove('visible');
+        document.getElementById('technicalarpvid').value = '';
+        thumbnailDiv.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    function appendThumbnails(videoID, hasMaxRes) {
+      console.log('Appending thumbnails for video ID:', videoID, 'hasMaxRes:', hasMaxRes);
+      const thumbnails = document.getElementById('thumbnails');
+      const thumbnailDiv = document.getElementById('hidden_div');
+      let html = `
+        <p class="text-lg font-semibold mb-4 text-center max-w-2xl mx-auto">Here are your thumbnails! Click an image to open, then right-click and select "Save Image As..." to download.</p>
+      `;
+      if (hasMaxRes) {
+        html += `
+          <p class="font-medium text-orange-600 text-center">» Full HD Thumbnail (1280x720)</p>
+          <div class="thumbnail-container">
+            <a href="https://img.youtube.com/vi/${videoID}/maxresdefault.jpg" target="_blank">
+              <img class="thumbnail-img mb-4" src="https://img.youtube.com/vi/${videoID}/maxresdefault.jpg" alt="Full HD Thumbnail" onerror="this.classList.add('error'); this.nextElementSibling.style.display='block'; console.log('Failed to load Full HD thumbnail');">
+              <div class="error-message">Failed to load Full HD thumbnail.</div>
+              <div class="thumbnail-overlay"><span>Download <i class="fa-solid fa-download"></i></span></div>
+            </a>
+          </div>
+        `;
+      }
+      html += `
+        <p class="font-medium text-orange-600 text-center">» Medium Thumbnail (480x360)</p>
+        <div class="thumbnail-container">
+          <a href="https://img.youtube.com/vi/${videoID}/hqdefault.jpg" target="_blank">
+            <img class="thumbnail-img mb-4" src="https://img.youtube.com/vi/${videoID}/hqdefault.jpg" alt="Medium Thumbnail" onerror="this.classList.add('error'); this.nextElementSibling.style.display='block'; console.log('Failed to load Medium thumbnail');">
+            <div class="error-message">Failed to load Medium thumbnail.</div>
+            <div class="thumbnail-overlay"><span>Download <i class="fa-solid fa-download"></i></span></div>
+          </a>
+        </div>
+        <p class="font-medium text-orange-600 text-center">» Small Thumbnail (360x240)</p>
+        <div class="thumbnail-container">
+          <a href="https://img.youtube.com/vi/${videoID}/mqdefault.jpg" target="_blank">
+            <img class="thumbnail-img mb-4" src="https://img.youtube.com/vi/${videoID}/mqdefault.jpg" alt="Small Thumbnail" onerror="this.classList.add('error'); this.nextElementSibling.style.display='block'; console.log('Failed to load Small thumbnail');">
+            <div class="error-message">Failed to load Small thumbnail.</div>
+            <div class="thumbnail-overlay"><span>Download <i class="fa-solid fa-download"></i></span></div>
+          </a>
+        </div>
+      `;
+      console.log('Setting thumbnails HTML:', html);
+      thumbnails.innerHTML = html;
+      document.getElementById('technicalarpvid').value = '';
+      thumbnailDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Initialize on DOM load
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOM loaded, initializing');
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.body.setAttribute('data-theme', savedTheme);
+      const themeToggle = document.querySelector('.theme-toggle i');
+      themeToggle.classList.add(savedTheme === 'dark' ? 'fa-moon' : 'fa-sun');
+      const scrollToTopBtn = document.querySelector('.scroll-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.add('show');
+        } else {
+          scrollToTopBtn.classList.remove('show');
+        }
+      });
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        mobileMenuBtn.addEventListener('touchstart', toggleMobileMenu);
+      } else {
+        console.error('Mobile menu button not found');
+      }
+      // Prevent input field from triggering form submission on click
+      const inputField = document.getElementById('technicalarpvid');
+      inputField.addEventListener('click', (event) => {
+        event.stopPropagation();
+        console.log('Input field clicked, preventing form submission');
+      });
+    });
+  </script>
+</body>
+</html>
